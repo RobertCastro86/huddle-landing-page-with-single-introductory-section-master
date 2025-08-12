@@ -1,0 +1,184 @@
+/* === Base Styles === */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(257, 40%, 49%);
+  color: white;
+  background-image: url("../../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+/* === Responsive Background for Larger Screens === */
+@media (min-width: 768px) {
+  body {
+    background-image: url("../../images/bg-desktop.svg");
+  }
+}
+
+/* === Header === */
+.header {
+  padding: 2rem;
+}
+
+.logo {
+  width: 150px;
+}
+
+/* === Intro Section === */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro-text h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.intro-image img {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+/* === Footer === */
+footer {
+  --webkit-backdrop-filter: blur(10px);
+  padding: 2rem 3;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-text p {
+  margin-bottom: 0.5rem;
+}
+
+/* === Social Icons === */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.social-icon svg {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon:hover::before {
+  opacity: 1;
+}
+
+.social-icon:hover svg {
+  transform: scale(1.1);
+}
+
+/* === Social Icon Gradients === */
+.facebook::before {
+  background: linear-gradient(45deg, #1877f2, #42a5f5);
+}
+
+.twitter::before {
+  background: linear-gradient(45deg, #1da1f2, #0d8bd9);
+}
+
+.instagram::before {
+  background: linear-gradient(45deg, #f56040, #e1306c, #c13584, #833ab4);
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
+}

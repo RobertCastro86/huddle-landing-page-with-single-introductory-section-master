@@ -1,0 +1,32 @@
+/* Layout padrão para dispositivos móveis */
+.intro-section {
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Layout para telas maiores */
+@media (min-width: 768px) {
+  .intro-section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 4rem;
+  }
+
+  .intro-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .intro-image {
+    flex: 1;
+  }
+
+  .intro-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1.2rem;
+  }
+}
