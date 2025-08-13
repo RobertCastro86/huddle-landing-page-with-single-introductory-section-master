@@ -79,7 +79,7 @@ body {
 
 /* === Footer === */
 footer {
-  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
   padding: 2rem;
 }
 
