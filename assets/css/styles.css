@@ -1,4 +1,14 @@
 /* === Base Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+   display: flex;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -33,7 +43,9 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .intro-text h1 {
@@ -45,6 +57,7 @@ body {
 .intro-text p {
   font-size: 1rem;
   margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .btn {
@@ -75,7 +88,7 @@ footer {
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: -200px auto;
   text-align: center;
   padding: 0 2rem;
 }
@@ -92,13 +105,15 @@ footer {
 
 /* === Social Icons === */
 .social-icons {
+  align-items: flex-start;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: -2.5rem;
 }
 
 .social-icon {
+  align-items: flex-start;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -159,9 +174,15 @@ footer {
 }
 
 /* === Responsive Styles === */
+
+
 @media (max-width: 768px) {
   .social-icons {
     gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px;
   }
 
   .social-icon {
